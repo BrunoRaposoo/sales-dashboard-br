@@ -1,21 +1,31 @@
-import styled from 'styled-components'
-
-const LoginArea = styled.div`
-  background: #666;
-`
-
-const LoginImage = styled.div`
-  background-image: url('/login-img.svg');
-  background-size: cover;
-  height: 100vh;
-  width: 50vw;
-`
+import { BannerImage } from '@/components'
+import { Box, Container, Grid } from '@mui/material'
 
 export default function Login() {
   return (
     <>
-      <LoginArea>LOGIN</LoginArea>
-      <LoginImage />
+      <Box>
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            sx={{ alignItems: 'center', display: 'flex', height: '100vh' }}
+          >
+            <Container>
+              <h1>LOGIN</h1>
+            </Container>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            sx={{ display: { xs: 'none', sm: 'block' } }}
+          >
+            <BannerImage />
+          </Grid>
+        </Grid>
+      </Box>
     </>
   )
 }
