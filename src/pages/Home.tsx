@@ -1,6 +1,6 @@
 import { AvatarList, CardComponent, Header } from '@/components'
 import { currencyConverter } from '@/utils'
-import { Card, Container } from '@mui/material'
+import { Container } from '@mui/material'
 
 
 export default function Home() {
