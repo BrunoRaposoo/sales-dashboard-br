@@ -103,7 +103,7 @@ export default function Login() {
             </Container>
           </Grid2>
           <Grid2
-            size={{ xs: 12, sm: 16 }}
+            size={{ xs: 12, sm: 6 }}
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             <BannerImage />
