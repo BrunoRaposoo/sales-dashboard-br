@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Container className='mb-2' maxWidth="lg">
+      <Container className="mb-2" maxWidth="lg">
         <Grid2 container spacing={4}>
           {!highLightsError && (
             <>
