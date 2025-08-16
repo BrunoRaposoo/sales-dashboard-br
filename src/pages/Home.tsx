@@ -12,6 +12,7 @@ import { useGet } from '@/hooks'
 import { customChartProps, HighlightsData, NewsData, StarsData } from '@/types'
 import { currencyConverter, highlightTextConverter } from '@/utils'
 import { Container, Grid2 } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   const {
@@ -109,13 +110,13 @@ export default function Home() {
                   }
                 >
                   {!highlightsLoading && highlightsData && (
-                    <>
+                    <Link to="/leads">
                       <StyledH2 className="mb-1">Leads conectados</StyledH2>
                       <StyledH3 className="mb-1" size={40} lineheight={40}>
                         {highlightsData[2].value}
                       </StyledH3>
                       <StyledH3>{highlightsData[2].subtitle}</StyledH3>
-                    </>
+                    </Link>
                   )}
                 </CardComponent>
               </Grid2>
