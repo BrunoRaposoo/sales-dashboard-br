@@ -13,9 +13,14 @@ import { LoginData, LoginPostData, MessageProps, DecodedJWT } from '@/types'
 import { jwtExpirationDateConverter, pxToRem } from '@/utils'
 import { Box, Container, Grid2 } from '@mui/material'
 import { ChangeEvent, useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '@/redux'
 
 export default function Login() {
   const navigate = useNavigate()
+  const { email, message } = useSelector(
+    (state: RootState) => state.createProfile
+  )
   const inputs = [
     {
       type: 'email',
@@ -32,7 +37,7 @@ export default function Login() {
   const { formValues, formValid, handleChange } = userFormValidation(inputs)
 
   const handleMessage = (): MessageProps => {
-    if (!error) return { msg: '', type: 'success' }
+    if (!error) return { msg: message ?? '', type: 'success' }
     switch (error) {
       case 401:
         return {
@@ -60,11 +65,18 @@ export default function Login() {
       const decoded: DecodedJWT = jwtDecode(data?.jwt_token)
       Cookies.set('Authorization', data?.jwt_token, {
         expires: jwtExpirationDateConverter(decoded.exp),
-        secure: true
+        secure: true,
       })
     }
     if (Cookies.get('Authorization')) navigate('/home')
   }, [data, navigate])
+
+  useEffect(() => {
+    if (email) {
+      handleChange(0, email)
+    }
+  }, [email])
+
   return (
     <>
       <Box>
