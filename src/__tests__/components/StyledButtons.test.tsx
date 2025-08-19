@@ -8,7 +8,7 @@ describe('StyledButton', () => {
   const renderComponent = (theme: Theme, className?: string, props = {}) =>
     render(
       <ThemeProvider theme={theme}>
-        <StyledButton className={className} />
+        <StyledButton className={className} {...props} />
       </ThemeProvider>
     )
 
