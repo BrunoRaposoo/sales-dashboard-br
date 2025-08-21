@@ -54,6 +54,7 @@ export default function Home() {
             <>
               <Grid2 size={{ xs: 12, md: 4 }}>
                 <CardComponent
+                  id="total-sales"
                   className={
                     highlightsLoading
                       ? 'skeleton-loading skeleton-loading-mh-1'
@@ -75,6 +76,7 @@ export default function Home() {
               </Grid2>
               <Grid2 size={{ xs: 12, md: 4 }}>
                 <CardComponent
+                  id="month-goals"
                   className={
                     highlightsData
                       ? highlightsData[1].subtitle
@@ -103,6 +105,7 @@ export default function Home() {
               </Grid2>
               <Grid2 size={{ xs: 12, md: 4 }}>
                 <CardComponent
+                  id="total-leads"
                   className={
                     highlightsLoading
                       ? 'skeleton-loading skeleton-loading-mh-1'
@@ -125,6 +128,7 @@ export default function Home() {
           <Grid2 size={{ xs: 12, md: 7 }}>
             {!salesMonthError && (
               <CardComponent
+                id="month-sales"
                 className={
                   salesMonthLoading
                     ? 'skeleton-loading skeleton-loading-mh-2'
@@ -147,6 +151,7 @@ export default function Home() {
           <Grid2 size={{ xs: 12, md: 5 }}>
             {!salesStarsError && (
               <CardComponent
+                id="sales-stars"
                 className={
                   salesStarsLoading
                     ? 'skeleton-loading skeleton-loading-mh-2'
@@ -173,6 +178,7 @@ export default function Home() {
           <Grid2 size={{ xs: 12, md: 5 }}>
             {!newsError && (
               <CardComponent
+                id="news"
                 className={
                   newsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''
                 }
@@ -203,6 +209,7 @@ export default function Home() {
           <Grid2 size={{ xs: 12, md: 7 }}>
             {!salesYearError && (
               <CardComponent
+                id='yaer-sales'
                 className={
                   salesYearLoading
                     ? 'skeleton-loading skeleton-loading-mh-2'

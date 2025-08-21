@@ -134,17 +134,23 @@ export default function Profile() {
                       buttons={[
                         {
                           className: 'primary',
+                          id: 'update-profile',
                           disabled: !formValid || profileUpdateLoading,
                           type: 'submit',
                           onClick: handleSubmit,
-                          children: profileUpdateLoading ? 'Aguarde...' : 'Atualizar meu Perfil',
+                          children: profileUpdateLoading
+                            ? 'Aguarde...'
+                            : 'Atualizar meu Perfil',
                         },
                         {
                           className: 'alert',
+                          id: 'delete-profile',
                           disabled: profileDeleteLoading,
                           type: 'submit',
                           onClick: handleDelete,
-                          children: profileDeleteLoading ? 'Aguarde...' : 'Excluir miha conta',
+                          children: profileDeleteLoading
+                            ? 'Aguarde...'
+                            : 'Excluir miha conta',
                         },
                       ]}
                       message={updateMessage}
@@ -159,12 +165,13 @@ export default function Profile() {
               <StyledH2 className="mb-1">Definições de conta</StyledH2>
               <StyledButton
                 className="primary mb-1"
+                id='theme-switch'
                 onClick={themeContext?.toggleTheme}
               >
                 Trocar para tema{' '}
                 {themeContext?.appTheme === 'light' ? 'escuro' : 'claro'}
               </StyledButton>
-              <StyledButton className="alert" onClick={logout}>
+              <StyledButton className="alert" id='logout' onClick={logout}>
                 Logout
               </StyledButton>
             </CardComponent>
