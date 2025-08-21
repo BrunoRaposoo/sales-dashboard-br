@@ -1,5 +1,5 @@
-import { pxToRem } from "@/utils";
-import styled from "styled-components";
+import { pxToRem } from '@/utils'
+import styled from 'styled-components'
 
 export const CardComponent = styled.div`
   background-color: ${(props) => props.theme.card.background};

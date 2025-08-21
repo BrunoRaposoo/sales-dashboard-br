@@ -167,6 +167,7 @@ exports[`StyledButton Dark Theme should match snapshot without borderless disabl
 
 <button
     class="c0 primary"
+    disabled=""
   />
 </DocumentFragment>
 `;
@@ -395,6 +396,7 @@ exports[`StyledButton Light Theme should match snapshot without borderless disab
 
 <button
     class="c0 primary"
+    disabled=""
   />
 </DocumentFragment>
 `;

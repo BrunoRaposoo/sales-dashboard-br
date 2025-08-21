@@ -27,7 +27,9 @@ describe('StyledButton', () => {
         expect(asFragment()).toMatchSnapshot()
       })
       it('should match snapshot without borderless disabled status', () => {
-        const { asFragment } = renderComponent(theme, 'primary', { disabled: true })
+        const { asFragment } = renderComponent(theme, 'primary', {
+          disabled: true,
+        })
         expect(asFragment()).toMatchSnapshot()
       })
     })
