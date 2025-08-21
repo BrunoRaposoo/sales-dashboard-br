@@ -209,7 +209,7 @@ export default function Home() {
           <Grid2 size={{ xs: 12, md: 7 }}>
             {!salesYearError && (
               <CardComponent
-                id='yaer-sales'
+                id="yaer-sales"
                 className={
                   salesYearLoading
                     ? 'skeleton-loading skeleton-loading-mh-2'

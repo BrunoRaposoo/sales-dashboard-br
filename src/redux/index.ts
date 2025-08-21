@@ -3,8 +3,8 @@ import createProfileReducer from './slices/createProfile'
 
 const store = configureStore({
   reducer: {
-    createProfile: createProfileReducer
-  }
+    createProfile: createProfileReducer,
+  },
 })
 
 export type RootState = ReturnType<typeof store.getState>

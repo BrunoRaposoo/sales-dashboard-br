@@ -1,4 +1,4 @@
-import { jwtExpirationDateConverter } from "@/utils"
+import { jwtExpirationDateConverter } from '@/utils'
 
 describe('jwtExpirationDateConverter', () => {
   const realDateNow = Date.now.bind(global.Date)

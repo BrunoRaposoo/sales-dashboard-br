@@ -30,7 +30,6 @@ export default function Header() {
             <Avatar
               alt="avatar de usuário"
               src="/dnc-avatar.svg"
-
               sx={{ width: pxToRem(40), height: pxToRem(40) }}
             />
           </Link>

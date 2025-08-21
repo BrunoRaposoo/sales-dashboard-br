@@ -77,7 +77,11 @@ export default function Profile() {
   }
 
   const handleDelete = async () => {
-    if (confirm('Tem certeza que deseja excluir sua conta ? Se sim, certifique-se de deletar os seus leads')) {
+    if (
+      confirm(
+        'Tem certeza que deseja excluir sua conta ? Se sim, certifique-se de deletar os seus leads'
+      )
+    ) {
       try {
         await profileDeleteData()
         alert('Perfil deletado com sucesso')
@@ -165,13 +169,13 @@ export default function Profile() {
               <StyledH2 className="mb-1">Definições de conta</StyledH2>
               <StyledButton
                 className="primary mb-1"
-                id='theme-switch'
+                id="theme-switch"
                 onClick={themeContext?.toggleTheme}
               >
                 Trocar para tema{' '}
                 {themeContext?.appTheme === 'light' ? 'escuro' : 'claro'}
               </StyledButton>
-              <StyledButton className="alert" id='logout' onClick={logout}>
+              <StyledButton className="alert" id="logout" onClick={logout}>
                 Logout
               </StyledButton>
             </CardComponent>

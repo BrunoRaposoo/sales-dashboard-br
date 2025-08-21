@@ -1,8 +1,8 @@
-import { FormComponentProps } from "@/types";
-import { StyledInput } from "./StyledInput";
-import { StyledButton } from "./StyledButton";
+import { FormComponentProps } from '@/types'
+import { StyledInput } from './StyledInput'
+import { StyledButton } from './StyledButton'
 import styled from 'styled-components'
-import { pxToRem } from "@/utils";
+import { pxToRem } from '@/utils'
 
 export const StyledForm = styled.form`
   display: flex;
@@ -20,11 +20,11 @@ export default function FormComponent(props: FormComponentProps) {
       {buttons.map((buttonProps, index) => (
         <StyledButton key={index} {...buttonProps} />
       ))}
-      {
-        message && (<div style={{ color: message.type === 'error' ? 'red' : 'green'}}> 
+      {message && (
+        <div style={{ color: message.type === 'error' ? 'red' : 'green' }}>
           {message.msg}
-        </div>)
-      }
+        </div>
+      )}
     </StyledForm>
   )
 }

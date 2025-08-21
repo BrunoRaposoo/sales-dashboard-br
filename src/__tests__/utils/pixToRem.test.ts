@@ -1,4 +1,4 @@
-import { pxToRem } from "@/utils";
+import { pxToRem } from '@/utils'
 
 describe('pixToRem', () => {
   it('should correctly convert pixels to rem for positive values', () => {
